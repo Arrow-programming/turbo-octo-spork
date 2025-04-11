@@ -1,0 +1,1268 @@
+<!doctype html>
+<!--
+Created by Paul Vanderboon, April of 2025. This work is protected by the Apache License 2.0.
+I can be reached on GitHub at https://github.com/Arrow-programming
+
+Color palette:
+    Black: #222831
+    Gray: #393E46
+    Yellow: #FFD369
+    Blue: #5557ff
+    White: #EEEEEE
+-->
+
+<html lang="en">
+    <!--Styling, Imports, Metadata-->
+    <head>
+        <!-- Main Meta tags -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="Redeemer Free Reformed Church - A congregation located in South Grand Rapids, glorifying God and making disciples of Christ.">
+        <meta name="keywords" content="Redeemer FRC, Free Reformed Church, South Grand Rapids, Worship, Ministries, Sermons, Meditation, Christian Church">
+        <!--<meta name="author" content="Paul Vanderboon">-->
+        <meta name="robots" content="index, follow">
+
+        <!-- Open Graph Meta Tags (for social media sharing) -->
+        <meta property="og:title" content="Redeemer Free Reformed Church">
+        <meta property="og:description" content="Join Redeemer Free Reformed Church in South Grand Rapids as we glorify God and make disciples of Christ.">
+        <meta property="og:image" content="https://frcna.org/static/img/frc-logo-260px.webp">
+        <meta property="og:url" content="https://redeemerfrc.org/">
+        <meta property="og:type" content="website">
+        <meta property="og:locale" content="en_US">
+
+        <!-- Twitter Card Meta Tags -->
+        <!--<meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Redeemer Free Reformed Church">
+        <meta name="twitter:description" content="Join Redeemer Free Reformed Church in South Grand Rapids as we glorify God and make disciples of Christ.">
+        <meta name="twitter:image" content="https://frcna.org/static/img/frc-logo-260px.webp">
+        <meta name="twitter:site" content="@YourTwitterHandle">-->
+
+        <!-- Favicon and App Icons -->
+        <link rel="icon" href="https://frcna.org/static/img/frc-logo-260px.webp" type="image/x-icon">
+        <link rel="apple-touch-icon" href="https://frcna.org/static/img/frc-logo-260px.webp">
+        <link rel="manifest" href="/manifest.json">
+
+        <!-- SEO Enhancements -->
+        <meta name="theme-color" content="#FFD369">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="application-name" content="Redeemer FRC">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="apple-mobile-web-app-title" content="Redeemer FRC">
+
+        <!-- Canonical Link -->
+        <link rel="canonical" href="https://redeemerfrc.org/">
+
+        <!-- Schema.org Markup for SEO -->
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "Organization",
+                "name": "Redeemer Free Reformed Church",
+                "url": "https://redeemerfrc.org/",
+                "logo": "https://frcna.org/static/img/frc-logo-260px.webp"
+            }
+        </script>
+        <!--
+        Schema Markup that wasn't included in the above script:
+
+        "sameAs": [
+            "https://www.facebook.com/YourChurchPage",
+            "https://twitter.com/YourTwitterHandle"
+        ],
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+1-123-456-7890",
+            "contactType": "Customer Service"
+        }
+        
+        -->
+        <script type="application/ld+json">
+            {
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "Redeemer Free Reformed Church",
+            "url": "https://redeemerfrc.org/",
+            "description": "Redeemer Free Reformed Church - A congregation located in South Grand Rapids, glorifying God and making disciples of Christ.",
+            "mainEntity": {
+                "@type": "ItemList",
+                "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Who We Are",
+                    "url": "https://redeemerfrc.org/#WhoWeAre",
+                    "description": "Learn more about our church and its mission."
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Doctrinal Standards",
+                    "url": "https://redeemerfrc.org/#DoctrinalStandards",
+                    "description": "Explore the doctrinal standards that guide our faith."
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "name": "Our Leadership",
+                    "url": "https://redeemerfrc.org/#OurLeadership",
+                    "description": "Meet the leaders who serve our congregation."
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 4,
+                    "name": "Ministries",
+                    "url": "https://redeemerfrc.org/#Ministries",
+                    "description": "Discover the ministries we offer to serve our community."
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 5,
+                    "name": "FAQs",
+                    "url": "https://redeemerfrc.org/#FAQs",
+                    "description": "Find answers to frequently asked questions about our church."
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 6,
+                    "name": "Free Reformed Churches",
+                    "url": "https://redeemerfrc.org/#FreeReformedChurches",
+                    "description": "Learn about the Free Reformed Churches (FRCNA)."
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 7,
+                    "name": "Worship Info",
+                    "url": "https://redeemerfrc.org/#WorshipInfo",
+                    "description": "Details about our worship services and schedule."
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 8,
+                    "name": "Sermons",
+                    "url": "https://redeemerfrc.org/#Sermons",
+                    "description": "Listen to sermons and grow in your faith."
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 9,
+                    "name": "Meditation",
+                    "url": "https://redeemerfrc.org/#Meditation",
+                    "description": "Read meditations to reflect on God's Word."
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 10,
+                    "name": "Calendar",
+                    "url": "https://redeemerfrc.org/#Calendar",
+                    "description": "Stay updated with our upcoming events and activities."
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 11,
+                    "name": "Contact Us",
+                    "url": "https://redeemerfrc.org/#ContactUs",
+                    "description": "Get in touch with us for more information."
+                }
+                ]
+            }
+            }
+        </script>
+        <!--Fonts and Icons-->
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+        <!--Page title and Favicon-->
+        <title>Redeemer FRC</title>
+        <link rel="icon" href="https://frcna.org/static/img/frc-logo-260px.webp" type="image/x-icon">
+        <!--Scroll to top on load-->
+        <script>
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        </script>
+        <!--Utilities...-->
+        <style>
+            * {
+                transition: 200ms;
+            }
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                font-family: 'Lato', sans-serif;
+                font-size: 16px;
+                display: flex;
+                flex-direction: column;
+                min-height: 100vh;
+                overflow-x: hidden;
+            }
+            main {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+            }
+            
+            abbr[title] {
+                border-bottom: none !important;
+                cursor: inherit !important;
+                text-decoration: none !important;
+            }
+            
+            .link {
+                display: inline-block;
+                position: relative;
+                color: #5557ff;
+                text-decoration: none;
+                transition: all 400ms ease;
+            }
+            .link::before {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                bottom: 0;
+                left: 0;
+                background-color: #393E46;
+                visibility: hidden;
+                transform: scaleX(0);
+                transition: all 0.3s ease-in-out 0s;
+                cursor: pointer;
+            }
+            .link:hover::before {
+                visibility: visible;
+                transform: scaleX(1);
+            }
+            .link:hover {
+                color: #ffca4f;
+            }
+            
+            ul.bullet {
+                list-style-type: none;
+                padding: 0; /* Remove default padding */
+                margin: 0 auto; /* Center the list horizontally */
+                color: #393E46;
+                font-size: 1.2rem;
+                line-height: 1.5;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start; /* Align text to the left */
+                justify-content: center; /* Center the list as a whole */
+                width: fit-content; /* Shrink to fit the content */
+            }
+
+            ul.bullet li {
+                position: relative;
+                padding-left: 30px; /* Add space for the bullet */
+                margin-bottom: 5px;
+                text-align: left; /* Ensure text aligns properly */
+            }
+
+            ul.bullet li::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 10px;
+                height: 10px;
+                border-radius: 3px;
+                border: 2px solid #393E46;
+                background-color: transparent; /* Optional: Add a background color if needed */
+            }
+            
+            ::selection {
+              background: rgba(255, 240, 158, 0.5);
+            }
+            ::-moz-selection {
+              background: rgba(255, 240, 158, 0.5);
+            }
+            
+            .highlight {
+              position:relative;
+            }
+            .highlight:before{
+              content:"";
+              z-index:-1;
+              left:-0.5em;
+              top:-0.1em;
+              border-width:4px;
+              border-style:solid;
+              border-color:#FFD369;
+              position:absolute;
+              border-right-color:transparent;
+              width:100%;
+              height:1em;
+              transform:rotate(2deg);
+              opacity:0.7;
+              border-radius:50%;
+              padding:0.1em 0.25em;
+            }
+            .highlight:after{
+              content:"";
+              z-index:-1;
+              left:-0.5em;
+              top:0.1em;
+              padding:0.1em 0.25em;
+              border-width:4px;
+              border-style:solid;
+              border-color:#FFD369;
+              border-left-color:transparent;
+              border-top-color:transparent;
+              position:absolute;
+              width:100%;
+              height:1em;
+              transform:rotate(-1deg);
+              opacity:0.7;
+              border-radius:50%;
+            }
+        </style>
+        <!--Hero-->
+        <style>
+            header {
+                text-align: center; 
+                position: relative;
+                height: 350px;
+                box-shadow: 0px 0px 15px rgb(0, 0, 0, 1);
+                overflow: hidden; 
+            }
+            
+            .hero {
+                position: relative;
+                width: 100%; 
+                height: 100%; 
+                display: flex;
+                flex-direction: column;
+                justify-content: center; 
+                align-items: center; 
+            }
+            
+            .hero h1 {
+                color: rgb(255, 211, 105);
+                text-shadow: 0px 0px 10px rgb(255, 211, 105);
+                font-size: clamp(3rem, 8vw, 6rem); 
+                z-index: 1;
+                text-align: center; 
+                margin: 0; 
+                padding: 0 20px; 
+            }
+            
+            #line {
+                position: absolute;
+                left: 30px;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 5px;
+                height: 100px; 
+                background-color: #FFD369;
+            }
+            
+            .hero h2 {
+                color: white;
+                font-size: clamp(1.2rem, 3vw, 1.8rem); 
+                z-index: 1;
+                text-align: center;
+                margin: 0; 
+                padding: 10px 20px; 
+                max-width: 80%; 
+            }
+            
+            .hero #img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-image: url("_410e1624-ea88-401c-9c29-83d45fd35f00.jpg");
+                background-position: center; /* Default position */
+                
+                background-attachment: fixed;
+                opacity: 0.3;
+                z-index: 0;
+            }
+
+            /* Adjust background position for different screen sizes */
+            @media (min-width: 1200px) {
+                .hero #img {
+                    background-position: -800px -145px; /* Adjust for large screens */
+                }
+            }
+
+            @media (max-width: 1199px) and (min-width: 768px) {
+                .hero #img {
+                    background-position: -915px -120px; /* Adjust for medium screens */
+                }
+            }
+
+            @media (max-width: 767px) {
+                .hero #img {
+                    background-position: -1000px -180px; /* Adjust for small screens */
+                }
+            }
+
+            /* Media Query for smaller screens */
+            @media (max-width: 768px) {
+                header {
+                    height: auto;
+                }
+            
+                .hero {
+                    padding: 50px 0; 
+                }
+            
+                #line {
+                    display: none;
+                }
+            
+                .hero h1 {
+                    font-size: clamp(4rem, 12vw, 6rem);
+                }
+            
+                .hero h2 {
+                    margin-top: 10px; 
+                    font-size: clamp(1rem, 4vw, 1.5rem);
+                }
+            }
+        </style>
+        
+        <!--Navigation-->
+        <style>
+            nav {
+                display: flex;
+                justify-content: center;
+                position: fixed;
+                top: 10px;
+                width: 100%;
+                z-index: 2;
+                user-select: none;
+            }
+            nav.sticky {
+                position: fixed;
+                top: 0;
+            }
+            nav ul {
+                list-style-type: none;
+                padding: 3px 5px;
+                margin: 0;
+                display: flex;
+                justify-content: center;
+                /*background: rgba(255, 255, 255, 0.2);
+                -webkit-backdrop-filter: blur(5px);
+                backdrop-filter: blur(5px);
+                border-radius: 20px;*/
+            }   
+            nav ul li {
+                margin: 0 5px;
+                position: relative;
+            }
+            
+            /* Center align the dropdown text and arrow */
+            nav ul li a {
+                display: flex; /* Use flexbox for alignment */
+                align-items: center; /* Vertically center the text and arrow */
+                justify-content: space-between; /* Add space between text and arrow */
+                color: white;
+                text-decoration: none;
+                padding: 10px 18px;
+                border-radius: 20px;
+            }
+
+            nav ul li a span.material-symbols-outlined {
+                font-size: 20px; /* Adjust the size of the arrow */
+                margin-left: 5px; /* Add some spacing between the text and the arrow */
+                line-height: 1; /* Ensure the arrow doesn't affect line height */
+            }
+
+            nav ul li a:hover {
+                background-color: #FFD369;
+            }
+            /* Add sliding animation to dropdown */
+            nav ul li ul {
+                transition: 0s;
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                background: rgba(255, 255, 255, 0.2);
+                -webkit-backdrop-filter: blur(5px);
+                backdrop-filter: blur(5px);
+                box-shadow: 0px 0px 15px rgb(0, 0, 0, 0.5);
+                border-radius: 10px;
+                opacity: 0;
+                visibility: hidden;
+                transform: translateY(-10px); /* Start slightly above */
+                /*transition: opacity 1.3s ease, visibility 1.3s ease, transform 1.3s ease; /* Smooth transition */
+            }
+
+            nav ul li:hover ul {
+                display: block;
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0); /* Slide into place */
+            }
+            nav ul li ul {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                background: rgba(255, 255, 255, 0.9);
+                box-shadow: 0px 0px 15px rgb(0, 0, 0, 0.5);
+                border-radius: 10px;
+            }
+            nav ul li:hover ul {
+                display: block;
+            }
+            nav ul li ul li {
+                width: 200px;
+            }
+            nav ul li ul li a {
+                color: black;
+                border-radius: 25px;
+                /*background-color: #FFD369;*/
+                background: none;
+                border-style: solid;
+                border-color: transparent;
+                padding: 10px 10px;
+            }
+            nav ul li ul li a:hover {
+                /*background-color: #FFD369;*/
+                background: none;
+                border-style: solid;
+                border-color: #FFD369;
+                /*color: white;*/
+            }
+            
+            #underlay {
+                transition: 1s;
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 70px;
+                justify-content: center;
+                background: rgba(0, 0, 0, 0.5);
+                -webkit-backdrop-filter: blur(15px);
+                backdrop-filter: blur(15px);
+                box-shadow: 0px 0px 15px rgb(0, 0, 0, 0.5);
+                z-index: 2;
+            }
+
+            #hamburger {
+                display: none;
+                font-size: 30px;
+                cursor: pointer;
+                color: white;
+                padding: 10px;
+                z-index: 3;
+            }
+
+            #nav-links {
+                display: flex;
+                list-style-type: none;
+                padding: 3px 5px;
+                margin: 0;
+                justify-content: center;
+            }
+
+            #nav-links li {
+                margin: 0 5px;
+                position: relative;
+            }
+
+            #nav-links li ul {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                background: rgba(255, 255, 255, 0.8);
+                -webkit-backdrop-filter: blur(5px);
+                backdrop-filter: blur(5px);
+                box-shadow: 0px 0px 15px rgb(0, 0, 0, 0.5);
+                border-radius: 10px;
+            }
+
+            #nav-links li:hover ul {
+                display: block;
+            }
+
+            @media (max-width: 768px) {
+                #hamburger {
+                    display: block;
+                }
+
+                #nav-links {
+                    display: none;
+                    flex-direction: column;
+                    background-color: #222831;
+                    position: absolute;
+                    top: 50px;
+                    left: 0;
+                    width: 100%;
+                    z-index: 2;
+                }
+
+                #nav-links li {
+                    text-align: center;
+                    margin: 10px 0;
+                }
+
+                #nav-links li ul {
+                    position: static;
+                    box-shadow: none;
+                }
+            }
+        </style>
+        <!--Content Utilites, text fade in-->
+        <style>
+            .tabcontent {
+                display: none;
+                padding: 20px;
+                height: 100%; 
+                background: white;
+            }
+            .tablink {
+                cursor: pointer;
+            }
+            
+            .content-content {
+                display: flex;
+                flex-direction: column; /* Stack items vertically */
+                align-items: center; /* Center items horizontally */
+                justify-content: center; /* Center items vertically if needed */
+                position: relative;
+            }
+            .content-text {
+                text-align: center;
+                background: rgba(255, 255, 255, 0.2);
+                -webkit-backdrop-filter: blur(5px);
+                backdrop-filter: blur(5px);
+                box-shadow: 0px 0px 20px 2px rgb(0, 0, 0, 0.2);
+                border-radius: 20px;
+                max-width: 70%; /* Set the maximum width to 70% of the page */
+                width: 100%; /* Ensure it takes up the full width within the max-width */
+                padding: 20px; /* Add padding for spacing inside the box */
+                margin: 20px 0; /* Add vertical spacing between stacked boxes */
+                z-index: 1;
+                position: relative;
+            }
+            
+            .quote {
+                text-align: center;
+                background: rgba(255, 255, 255, 0.2);
+                -webkit-backdrop-filter: blur(5px);
+                backdrop-filter: blur(5px);
+                border-radius: 20px;
+                flex: 1;
+                min-width: 92%;
+                padding-right: 20px;
+                padding-left: 20px;
+                margin-bottom: 30px;
+                margin-top: 10px;
+                z-index: 1;
+                position: relative;
+                font-size: 1.5rem;
+                color: #393E46;
+                line-height: 1.5;
+            }
+            .quote span {
+                color: #FFD369;
+                font-size: 5rem;
+            }
+            
+            main h2 {
+                color: #FFD369;
+                font-size: 2.5rem;
+            }
+            main p {
+                color: #393E46;
+                font-size: 1.2rem;
+                line-height: 1.5;
+            }
+
+            .canvas {
+                flex: 1;
+                min-width: 400px;
+                position: absolute;
+                z-index: 0;
+                opacity: 0.7;
+                left: 50%;
+                transform: translate(-50%, 0);
+            }
+
+            #type {
+                display: inline; /* Make the div behave like an inline element */
+                color: #FFD369;
+                text-align: center;
+                overflow: hidden;
+                margin: 0; /* Remove any default margin */
+                padding: 0; /* Remove any default padding */
+            }
+            #type p {
+                position: relative;
+                transform: translate(4px);
+                display: inline;
+                color: white;
+            }
+            
+            @keyframes come-in {
+                0% {
+                    opacity: 0;
+                    filter: blur(10px);
+                    transform: scale(1.1);
+                }
+    
+                100% {
+                    opacity: 1;
+                    filter: blur(0px);
+                    transform: scale(1);
+                }
+            }
+            
+            h1, h2, h3, h4, h5, h6, p, span, li, a, blockquote, #web-api {
+                position: relative;
+                animation-duration: 0.7s;
+                animation-fill-mode: both;
+            }
+        </style>
+        <!--Footer-->
+        <style>
+            footer {
+                background-color: #272727;
+                color: white;
+                padding: 40px 0;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                flex-wrap: wrap;
+                margin-top: 50px;
+                background-image: url("https://upload.wikimedia.org/wikipedia/commons/2/22/Pasni_Balochistan_Desert_Night_Sky.jpg");
+                background-position: 0 10px;
+                background-size: cover;
+                background-attachment: fixed;
+                box-shadow: 0px 0px 15px rgb(0, 0, 0, 1);
+            }
+            footer::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: #272727;
+                filter: grayscale(100%);
+                z-index: -1;
+            }
+            footer .footer-content {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 90%;
+                background: rgba(255, 255, 255, 0.2);
+                -webkit-backdrop-filter: blur(5px);
+                backdrop-filter: blur(5px);
+                box-shadow: 0px 0px 15px rgb(0, 0, 0, 0.5);
+                border-radius: 20px;
+            }
+            footer .footer-content h3 {
+                color: #FFD369;
+                text-shadow: 0px 0px 10px #FFD369;
+                font-size: 3rem;
+            }
+            footer .footer-content .left {
+                flex: 1;
+                text-align: center;
+                padding: 0 20px;
+            }
+            footer .footer-content .right {
+                flex: 1;
+                text-align: center;
+                padding: 0 20px;
+            }
+            footer .footer-content .divider {
+                height: 150px;
+                width: 2px;
+                background-color: #FFD369;
+            }
+            footer .footer-content .icons {
+                display: flex;
+                justify-content: center;
+                margin: 20px 0;
+            }
+            footer .footer-content .icons a {
+                color: #FFD369;
+                margin: 0 10px;
+                font-size: 24px;
+                text-decoration: none;
+            }
+            footer .footer-content .icons a:hover {
+                color: white;
+            }
+            footer .footer-content .contact-info {
+                margin: 20px 0; /* Remove the negative margin */
+            }
+        </style>
+    </head>
+    <body>
+        <!--The Header, navigation-->
+        <header id="header">
+            <div class="hero">
+                <div id="img"></div>
+                <h1 id="hero-title" style="text-shadow: none;">Redeemer <span style="color: white; text-shadow: 0 0 white;">FRC</span></h1>
+                <h2 id="hero-description">
+                    &nbsp;
+                    <span id="type">
+                        <p>A congregation located in </p>
+                        <span id="typeCursor"></span>
+                        <p>South Grand Rapids</p>
+                    </span>
+                </h2>
+                <div id="underlay"></div>
+                <nav id="navbar">
+                    <div id="hamburger" onclick="toggleMenu()">&#9776;</div> <!-- Hamburger Icon -->
+                    <ul id="nav-links">
+                        <li><a id="homeLink" class="tablink" onclick="openPage('home', this, '#FFD369', true); Scroll(0);">Home</a></li>
+                        <li>
+                            <!--About Us Directory-->
+                            <a>About Us <span class="material-symbols-outlined" style = "">keyboard_arrow_down</span></a>
+                            <ul>
+                                <li><a onclick="openPage('WhoWeAre', this, '#FFD369', true); Scroll(0);">Who We Are</a></li>
+                                <li><a onclick="openPage('DoctrinalStandards', this, '#FFD369', true); Scroll(0);">Doctrinal Standards</a></li>
+                                <li><a onclick="openPage('OurLeadership', this, '#FFD369', true); Scroll(0);">Our Leadership</a></li>
+                                <li><a onclick="openPage('Ministries', this, '#FFD369', true); Scroll(0);">Ministries</a></li>
+                                <li><a onclick="openPage('FAQs', this, '#FFD369', true); Scroll(0);">FAQs</a></li>
+                                <li><a onclick="openPage('FreeReformedChurches', this, '#FFD369', true); Scroll(0);">Free Reformed Churches (FRCNA)</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <!--Worship Directory-->
+                            <a>Worship <span class="material-symbols-outlined" style = "">keyboard_arrow_down</span></a>
+                            <ul>
+                                <li><a onclick="openPage('WorshipInfo', this, '#FFD369', true); Scroll(0);">Worship Info</a></li>
+                                <li><a onclick="openPage('Sermons', this, '#FFD369', true); Scroll(0);">Sermons</a></li>
+                                <li><a onclick="openPage('Meditation', this, '#FFD369', true); Scroll(0);">Meditation</a></li>
+                            </ul>
+                        </li>
+                        <li><a id="calendarLink" class="tablink" onclick="openPage('Calendar', this, '#FFD369', true); Scroll(0);">Calendar</a></li>
+                        <li><a id="contactUsLink" class="tablink" onclick="openPage('ContactUs', this, '#FFD369', true); Scroll(0);">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!--The MAIN Content-->
+        <main>
+            <!--Home-->
+            <div id="home" class="tabcontent">
+                <div class="content-content">
+                    <div class = "quote">
+                        <span class="material-icons">format_quote</span>
+                        For I know that my <b>redeemer</b> liveth, and that he shall stand at the latter day upon the earth <br> - Job 19:25 (KJV)
+                    </div>
+                    <div class="content-text">
+                        <h2 class="onscroll">Welcome!</h2>
+                        <p class="onscroll">We warmly invite you to join us as we worship Christ, our Redeemer.</p>
+                    </div>
+                    <div class="content-text">
+                        <h2 class="onscroll">Our Mission</h2>
+                        <p class="onscroll">
+                        <b>Redeemer Free Reformed Church</b> exists to glorify God by making disciples of Christ who are:</p>
+                        <ul class = "bullet">
+                            <li>Grounded in the Holy Scriptures</li>
+                            <li>Living lives pleasing to God</li>
+                            <li>Serving Christ and each other</li>
+                            <li>Equipped for suffering and persecution</li>
+                            <li>Prepared to die well, fully assured of the finished work of Christ</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--About Us-->
+            <!--<div id="AboutUs" class="tabcontent">
+                <div class="content-content">
+                    <div class="content-text">
+                        <h2 class="onscroll">About Us</h2>
+                        <p class="onscroll">Learn more about us and our beliefs.</p>
+                    </div>
+                </div>
+            </div>-->
+            <div id="WhoWeAre" class="tabcontent">
+                <div class="content-content">
+                    <div class="content-text">
+                        <h2 class="onscroll">Who We Are</h2>
+                        <p class="onscroll"><b>Redeemer FRC</b> is a congregation of the Free Reformed Churches of North America (FRCNA). It was planted in 2022 and instituted as an independent congregation of the FRCNA in 2023. </p>
+                        <p class="onscroll">
+                            
+                            <b>Redeemer Free Reformed Church</b> exists to glorify God by making disciples of Christ who are:</p>
+                        <ul class = "bullet">
+                            <li>Grounded in the Holy Scriptures  <a class = "link" href = "">Colossians 3:16</a></li>
+                            <li>Living lives pleasing to God  2 Peter 1:1-7; Colossians 1:9-12 </li>
+                            <li>Serving Christ and each other  John 13:1-17; John 21:15-17; Philippians 2:1-10</li>
+                            <li>Equipped for suffering and persecution  James 1:2-4; 1 Peter 1:7; 1 Peter 4:12-19</li>
+                            <li>Prepared to die well, fully assured of the finished work of Christ  Colossians 3:4; 1 Peter 1:3-4; Matthew 28:20</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="DoctrinalStandards" class="tabcontent">
+                <div class="content-content">
+                    <div class="content-text">
+                        <h2 class="onscroll">Doctrinal Standards</h2>
+                        <p class="onscroll">Our doctrinal standards.</p>
+                    </div>
+                </div>
+            </div>
+            <div id="OurLeadership" class="tabcontent">
+                <div class="content-content">
+                    <div class="content-text">
+                        <h2 class="onscroll">Our Leadership</h2>
+                        <p class="onscroll">Meet our leadership team.</p>
+                    </div>
+                </div>
+            </div>
+            <div id="Ministries" class="tabcontent">
+                <div class="content-content">
+                    <div class="content-text">
+                        <h2 class="onscroll">Ministries</h2>
+                        <p class="onscroll">Information about our ministries.</p>
+                    </div>
+                </div>
+            </div>
+            <div id="FAQs" class="tabcontent">
+                <div class="content-content">
+                    <div class="content-text">
+                        <h2 class="onscroll">FAQs</h2>
+                        <p class="onscroll">Frequently Asked Questions.</p>
+                    </div>
+                </div>
+            </div>
+            <div id="FreeReformedChurches" class="tabcontent">
+                <div class="content-content">
+                    <div class="content-text">
+                        <h2 class="onscroll">Free Reformed Churches (FRCNA)</h2>
+                        <p class="onscroll">Information about the Free Reformed Churches (FRCNA).</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!--Worship-->
+            <!--<div id="Worship" class="tabcontent">
+                <div class="content-content">
+                    <div class="content-text">
+                        <h2 class="onscroll">Worship</h2>
+                        <p class="onscroll">Learn more about our worship services.</p>
+                    </div>
+                </div>
+            </div>-->
+            <div id="WorshipInfo" class="tabcontent">
+                <div class="content-content">
+                    <div class="content-text">
+                        <h2 class="onscroll">Worship Info</h2>
+                        <p class="onscroll">Information about our worship services.</p>
+                    </div>
+                </div>
+            </div>
+            <div id="Sermons" class="tabcontent">
+                <div class="content-content">
+                    <div class="content-text">
+                        <h2 class="onscroll">Sermons</h2>
+                        <p class="onscroll">Listen to our sermons.</p>
+                    </div>
+                </div>
+            </div>
+            <div id="Meditation" class="tabcontent">
+                <div class="content-content">
+                    <div class="content-text">
+                        <h2 class="onscroll">Meditation</h2>
+                        <p class="onscroll">Read our meditations.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!--Calendar-->
+            <div id="Calendar" class="tabcontent">
+                <div class="content-content">
+                    <div class="content-text">
+                        <h2 class="onscroll">Calendar</h2>
+                        <p class="onscroll">View our calendar of events.</p>
+                        <!--<iframe 
+                            src="https://rfrc.breezechms.com/embed/calendar/grid?size=medium&#038;color=defined&#038;calendars=eyJpdiI6IktsN0J3SFpKS0svN2h6YndIeFBTWVE9PSIsInZhbHVlIjoiazF4dkI4STVrVGJxU2VwdmR1SU41SlcvdFlyd3ZDTWVRWURFUTEybVFPdmhzOWdhanpCelByTXMvSFFwaFZ4MDl4SXVNYmNoWHM5d1Fxbk9TcUlaMHc9PSIsIm1hYyI6ImU4ZThiOTU0MjkwMmIwM2Y1Y2ZkODljOTE2ZjkyMDA3YjIxMWE2MjY2NTNhMzk2ODU3YTIzZTA5MTAzNTFiNjAiLCJ0YWciOiIifQ%3D%3D" 
+                            seamless="seamless" 
+                            scrolling="no" 
+                            style="display:block; margin: auto; align-items: center; height:1200px; min-height:1200px; width:100%; max-width: 1200px; border:none;" 
+                            width="100%" 
+                            height="500" 
+                            class="iframe-class" 
+                            frameborder="0" 
+                            loading="eager">
+                        </iframe>-->
+                        
+                    </div>
+                    <iframe 
+                            id = "calendar"
+                            src="https://rfrc.breezechms.com/embed/calendar/grid?size=medium&color=defined&calendars=eyJpdiI6IktsN0J3SFpKS0svN2h6YndIeFBTWVE9PSIsInZhbHVlIjoiazF4dkI4STVrVGJxU2VwdmR1SU41SlcvdFlyd3ZDTWVRWURFUTEybVFPdmhzOWdhanpCelByTXMvSFFwaFZ4MDl4SXVNYmNoWHM5d1Fxbk9TcUlaMHc9PSIsIm1hYyI6ImU4ZThiOTU0MjkwMmIwM2Y1Y2ZkODljOTE2ZjkyMDA3YjIxMWE2MjY2NTNhMzk2ODU3YTIzZTA5MTAzNTFiNjAiLCJ0YWciOiIifQ%3D%3D" 
+                            seamless="seamless" 
+                            scrolling="no" 
+                            style="display:block; margin: auto; align-items: center; height:1200px; min-height:1200px; width:100%; max-width: 1200px; border:none;" 
+                            width="100%" 
+                            height="500" 
+                            class="iframe-class" 
+                            frameborder="0" 
+                            loading="lazy">
+                        </iframe>
+                </div>
+            </div>
+            
+            <!--Contact Us-->
+            <div id="ContactUs" class="tabcontent">
+                <div class="content-content">
+                    <div class="content-text">
+                        <h2 class="onscroll">Contact Us</h2>
+                        <p class="onscroll">Get in touch with us.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!--The footer-->
+        <footer>
+            <div class="footer-content">
+                <div class="left">
+                    <h3 class="onscroll">Arrow</h3>
+                    <div class="contact-info">
+                        <p class="onscroll">Phone: (123) 456-7890</p>
+                        <p class="onscroll">Email: email@doesntwork.com</p>
+                    </div>
+                    <div class="icons">
+                        <a id="homeLink" class="tablink" onclick="openPage('home', this, ''); Scroll(0);"><i class="material-icons">home</i></a>
+                        <a id="ReflectionLink" class="tablink" onclick="openPage('Reflection', this, ''); Scroll(0);"><i class="material-icons">info</i></a>
+                        <a id="EssayLink" class="tablink" onclick="openPage('Essay', this, ''); Scroll(0);"><i class="material-icons">event</i></a>
+                        <a id="ResourcesLink" class="tablink" onclick="openPage('Resources', this, ''); Scroll(0);"><i class="material-icons">subscriptions</i></a>
+                    </div>
+                    <!--<img src = "https://frcna.org/static/img/frc-logo-260px.webp">-->
+                </div>
+                <div class="divider"></div>
+                <div class="right">
+                    <p class="onscroll">Hello! I am a webdesigner and game developer. I code with the HTML Canvas API and occasionally KAPJS. I mostly use KA for posting projects and helping friends learn to code.</p>
+                </div>
+            </div>
+            <p class="onscroll">&copy; 2025 Redeemer Free Reformed Congregation. All rights reserved.</p>
+        </footer>
+    </body>
+    <!--Page & Nav JS-->
+    <script type>
+        // Open a page
+        function openPage(pageName, elmnt, color, glow) {
+            var i, tabcontent, tablinks;
+            
+            // Hide all tabcontent
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            
+            // Reset all tablinks' styles
+            tablinks = document.querySelectorAll("nav ul li a");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].style.backgroundColor = ""; // Reset background to blank
+                tablinks[i].style.boxShadow = "";      // Remove glow effect
+            }
+            
+            // Display the selected page and style the clicked link
+            document.getElementById(pageName).style.display = "block";
+            if (elmnt) {
+                elmnt.style.backgroundColor = color; // Apply the color to the clicked link
+                if (glow) {
+                    //elmnt.style.boxShadow = "0px 0px 15px #FFD369"; // Add glow effect
+                }
+            }
+
+            // Update the hero text and image
+            const heroTitle = document.getElementById("hero-title");
+            const heroDescription = document.getElementById("hero-description");
+            const heroImage = document.querySelector(".hero #img");
+            if (heroContent[pageName]) {
+                heroTitle.innerHTML = heroContent[pageName].title;
+                heroDescription.innerHTML = heroContent[pageName].description;
+                heroImage.style.backgroundImage = `url('${heroContent[pageName].image}')`;
+                heroImage.style.backgroundPosition = heroContent[pageName].backgroundPosition;
+            }
+        }
+        
+        // Default page
+        document.getElementById("homeLink").click();
+    </script>
+    <script>
+    // Page-specific hero text
+    const heroContent = {
+        home: {
+            title: "Redeemer FRC",
+            description: "A congregation located in <span class='highlight'>South Grand Rapids</span>",
+            image: "_410e1624-ea88-401c-9c29-83d45fd35f00.jpg", // Default home image
+            backgroundPosition: "" 
+        },
+        WhoWeAre: {
+            title: "Who We Are",
+            description: "Learn more about our church and its mission.",
+            image: "_10d0d689-2375-4016-8bf3-9b7afed303d1.jpg",
+            backgroundPosition: "center center"
+        },
+        DoctrinalStandards: {
+            title: "Doctrinal Standards",
+            description: "Explore the doctrinal standards that guide our faith.",
+            image: "_4e4ad95c-4da4-4eb8-900c-9ee866257afb.jpg",
+            backgroundPosition: "center -150px"
+        },
+        OurLeadership: {
+            title: "Our Leadership",
+            description: "Meet the leaders who serve our congregation.",
+            image: "crop_PAGE3_Our-Leadership_page-banner.jpg",
+            backgroundPosition: "center 0px"
+        },
+        Ministries: {
+            title: "Ministries",
+            description: "Discover the ministries we offer to serve our community.",
+            image: "ministries.jpg",
+            backgroundPosition: "center center"
+        },
+        FAQs: {
+            title: "FAQs",
+            description: "Find answers to frequently asked questions about our church.",
+            image: "faqs.jpg",
+            backgroundPosition: "center center"
+        },
+        FreeReformedChurches: {
+            title: "Free Reformed Churches",
+            description: "Learn about the Free Reformed Churches (FRCNA).",
+            image: "free-reformed-churches.jpg",
+            backgroundPosition: "center center"
+        },
+        WorshipInfo: {
+            title: "Worship Info",
+            description: "Details about our worship services and schedule.",
+            image: "_6a5a8104-ed8b-440a-8070-a70c15012e96.jpg",
+            backgroundPosition: "center -200px"
+        },
+        Sermons: {
+            title: "Sermons",
+            description: "Listen to sermons and grow in your faith.",
+            image: "sermons.jpg",
+            backgroundPosition: "center center"
+        },
+        Meditation: {
+            title: "Meditation",
+            description: "Read meditations to reflect on God's Word.",
+            image: "meditation.jpg",
+            backgroundPosition: "center center"
+        },
+        Calendar: {
+            title: "Calendar",
+            description: "Stay updated with our upcoming events and activities.",
+            image: "PAGE_calendar-EDIT.jpg",
+            backgroundPosition: "center 0px"
+        },
+        ContactUs: {
+            title: "Contact Us",
+            description: "Get in touch with us for more information.",
+            image: "contact-us.jpg",
+            backgroundPosition: "center center"
+        }
+    };
+    </script>
+    <!--Intersection Observer-->
+    <script type='module'>
+        function whenOnScreen(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationName = 'come-in';
+                }
+            });
+        }
+        if ('IntersectionObserver' in window) {
+            const observer = new IntersectionObserver(whenOnScreen, {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.2,
+            });
+            
+            document.querySelectorAll('.onscroll').forEach(el => {
+                observer.observe(el);
+            });
+        } else {
+            window.addEventListener('scroll', () => {
+                document.querySelectorAll('.onscroll').forEach(el => {
+                    const rect = el.getBoundingClientRect();
+                    if (rect.top < window.innerHeight && rect.bottom > 0) {
+                        if (!el.classList.contains('animated')) {
+                            el.style.animationName = 'come-in';
+                            el.classList.add('animated');
+                            el.addEventListener('animationend', () => {
+                                el.classList.remove('animated');
+                            }, { once: true });
+                        }
+                    }
+                });
+            });
+        }
+    </script>
+    <!--Scroll function for hashing-->
+    <script type>
+        function Scroll(x) { 
+            window.scrollTo({ top: x, behavior: "smooth" }); 
+        };
+    </script>
+    <!--Navigational junk-->
+    <script type>
+        window.addEventListener('scroll', function() {
+            //if(window.scrollY)
+            
+            var scrollDistance = window.pageYOffset || window.scrollY || document.documentElement.scrollTop;
+            var underlay = document.getElementById('underlay');
+            if (scrollDistance >= 50) {
+                underlay.style.display = 'block';
+            }
+            if (scrollDistance <= 50) {
+                underlay.style.display = 'none';
+            }
+            //alert(scrollDistance)
+        });
+
+        function toggleMenu() {
+            const navLinks = document.getElementById("nav-links");
+            if (navLinks.style.display === "flex") {
+                navLinks.style.display = "none";
+            } else {
+                navLinks.style.display = "flex";
+            }
+        }
+    </script>
+    <!--The Typewriter scripts-->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+    <script>
+        var typingOptions = {
+            strings: ["serving in", "witnessing to", "located in", "worshipping in", "gathering in", "fellowshipping in", "meeting in", "praying in"],
+            typeSpeed: 80,
+            backSpeed: 60,
+            loop: !0
+        }
+            new Typed('#typeCursor', typingOptions)
+    </script>
+    <script>
+    // Wait for the iframe to load
+    window.addEventListener('load', function () {
+        const iframe = document.querySelector('.iframe-class');
+        iframe.addEventListener('load', function () {
+            // Access the iframe's content
+            const iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+
+            // Find the "Today" button and simulate a click
+            const todayButton = iframeDocument.querySelector('button[aria-label="Today"]');
+            if (todayButton) {
+                todayButton.click();
+            }
+        });
+    });
+    </script>
+</html>
+
+
