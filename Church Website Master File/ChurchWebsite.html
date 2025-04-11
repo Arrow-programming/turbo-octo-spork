@@ -921,6 +921,73 @@ Color palette:
                 margin: 20px 0; /* Remove the negative margin */
             }
         </style>
+        <style>
+    /* Prevent hover and click styles for dropdown parents */
+    nav ul li a.no-click {
+        pointer-events: none; /* Disable clicking */
+        color: white; /* Ensure text color remains white */
+        background-color: transparent !important; /* Prevent background color change */
+    }
+
+    nav ul li a.no-click:hover {
+        background-color: transparent; /* Prevent hover background color */
+    }
+</style>
+<style>
+    /* Style for the "X" icon */
+    #close-icon {
+        display: none; /* Initially hidden */
+        font-size: 30px;
+        cursor: pointer;
+        color: white;
+        padding: 10px;
+        z-index: 4; /* Ensure it appears above the menu */
+        position: fixed; /* Keep the icon fixed */
+        top: 10px; /* Position it at the top */
+        left: 10px; /* Align it to the left */
+    }
+</style>
+<style>
+#nav-links {
+    display: flex; /* Default for regular menu */
+    flex-direction: row;
+}
+
+#nav-links.open {
+    display: flex; /* For mobile menu */
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 70px;
+    overflow-y: auto;
+}
+
+@media (max-width: 768px) {
+    #hamburger {
+        display: block;
+    }
+
+    #close-icon {
+        display: none;
+    }
+
+    #nav-links {
+        display: none; /* Hide by default for mobile */
+    }
+
+    #nav-links.open {
+        display: flex; /* Show when open */
+    }
+}
+</style>
+
     </head>
     <body>
         <!--The Header, navigation-->
@@ -931,7 +998,7 @@ Color palette:
                 <h2 id="hero-description">
                     &nbsp;
                     <span id="type">
-                        <p>A congregation located in </p>
+                        <p>A congregation</p>
                         <span id="typeCursor"></span>
                         <p>South Grand Rapids</p>
                     </span>
@@ -1014,11 +1081,11 @@ Color palette:
                             
                             <b>Redeemer Free Reformed Church</b> exists to glorify God by making disciples of Christ who are:</p>
                         <ul class = "bullet">
-                            <li>Grounded in the Holy Scriptures  <a class = "link" href = "">Colossians 3:16</a></li>
-                            <li>Living lives pleasing to God  2 Peter 1:1-7; Colossians 1:9-12 </li>
-                            <li>Serving Christ and each other  John 13:1-17; John 21:15-17; Philippians 2:1-10</li>
-                            <li>Equipped for suffering and persecution  James 1:2-4; 1 Peter 1:7; 1 Peter 4:12-19</li>
-                            <li>Prepared to die well, fully assured of the finished work of Christ  Colossians 3:4; 1 Peter 1:3-4; Matthew 28:20</li>
+                            <li>Grounded in the Holy Scriptures  <a class = "link" href = "https://www.biblegateway.com/passage/?search=Colossians%203%3A16&version=KJV">Colossians 3:16</a></li>
+                            <li>Living lives pleasing to God  <a class = "link" href = "https://www.biblegateway.com/passage/?search=2%20Peter%201%3A1-7&version=KJV">2 Peter 1:1-7</a>; <a class = "link" href = "https://www.biblegateway.com/passage/?search=Colossians%201%3A9-12&version=KJV">Colossians 1:9-12</a></li>
+                            <li>Serving Christ and each other  <a class = "link" href = "https://www.biblegateway.com/passage/?search=John%2013%3A1-17&version=KJV">John 13:1-17</a>; <a class = "link" href = "https://www.biblegateway.com/passage/?search=John%2021%3A15-17&version=KJV">John 21:15-17</a>; <a class = "link" href = "https://www.biblegateway.com/passage/?search=Philippians%202%3A1-10&version=KJV">Philippians 2:1-10</a></li>
+                            <li>Equipped for suffering and persecution  <a class = "link" href = "https://www.biblegateway.com/passage/?search=James%201%3A2-4&version=KJV">James 1:2-4</a>; <a class = "link" href = "https://www.biblegateway.com/passage/?search=1%20Peter%201%3A7&version=KJV">1 Peter 1:7</a>; <a class = "link" href = "https://www.biblegateway.com/passage/?search=1%20Peter%204%3A12-19&version=KJV">1 Peter 4:12-19</a></li>
+                            <li>Prepared to die well, fully assured of the finished work of Christ  <a class = "link" href = "https://www.biblegateway.com/passage/?search=Colossians%203%3A4&version=KJV">Colossians 3:4</a>; <a class = "link" href = "https://www.biblegateway.com/passage/?search=1%20Peter%201%3A3-4&version=KJV">1 Peter 1:3-4</a>; <a class = "link" href = "https://www.biblegateway.com/passage/?search=Matthew%2028%3A20&version=KJV">Matthew 28:20</a></li>
                         </ul>
                     </div>
                 </div>
@@ -1027,7 +1094,19 @@ Color palette:
                 <div class="content-content">
                     <div class="content-text">
                         <h2 class="onscroll">Doctrinal Standards</h2>
-                        <p class="onscroll">Our doctrinal standards.</p>
+                        <p class="onscroll">As a confessional reformed church, <b>Redeemer FRC</b> believes that the doctrines of the 16th century Protestant Reformation accurately summarize the teachings of God’s word. While creeds and confessions do not have the authority of Scripture, they are helpful for grounding churches in its truth. We subscribe to the <i>Heidelberg Catechism</i>, the <i>Belgic Confession of Faith</i>, and the <i>Canons of Dort</i> (collectively the Three Forms of Unity). We also subscribe to the <i>Apostle’s Creed</i>, the <i>Nicene Creed</i>, and the <i>Athanasian Creed</i>. These resources, along with information on the historical context of each, are available below.</p>
+                        <h3 class = "onscroll">The Three Forms of Unity</h3>
+                        <ul class = "bullet">
+                            <li><a class = "link" href = "https://frcna.org/heidelberg-catechism">Heidelberg Catechism</a></li>
+                            <li><a class = "link" href = "https://frcna.org/belgic-confession">Belgic Confession of Faith</a></li>
+                            <li><a class = "link" href = "https://frcna.org/canons-of-dort">Canons of Dort</a></li>
+                        </ul>
+                        <h3 class = "onscroll">Creeds</h3>
+                        <ul class = "bullet">
+                            <li><a class = "link" href = "https://frcna.org/apostles-creed">Apostle’s Creed</a></li>
+                            <li><a class = "link" href = "https://frcna.org/nicene-creed">Nicene Creed</a></li>
+                            <li><a class = "link" href = "https://frcna.org/athanasian-creed">Athanasian Creed</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -1146,7 +1225,7 @@ Color palette:
         <footer>
             <div class="footer-content">
                 <div class="left">
-                    <h3 class="onscroll">Arrow</h3>
+                    <h3 class="onscroll">Redeemer FRC</h3>
                     <div class="contact-info">
                         <p class="onscroll">Phone: (123) 456-7890</p>
                         <p class="onscroll">Email: email@doesntwork.com</p>
@@ -1161,11 +1240,13 @@ Color palette:
                 </div>
                 <div class="divider"></div>
                 <div class="right">
-                    <p class="onscroll">Hello! I am a webdesigner and game developer. I code with the HTML Canvas API and occasionally KAPJS. I mostly use KA for posting projects and helping friends learn to code.</p>
+                    <p class="onscroll">Lorem Ipsum</p>
                 </div>
             </div>
             <p class="onscroll">&copy; 2025 Redeemer Free Reformed Congregation. All rights reserved.</p>
         </footer>
+        <!-- Add the "X" icon -->
+        <div id="close-icon" onclick="toggleMenu()">&#10005;</div> <!-- Unicode for "X" -->
     </body>
     <!--Page & Nav JS-->
     <script type>
@@ -1348,23 +1429,44 @@ Color palette:
         function toggleMenu() {
             const navLinks = document.getElementById("nav-links");
             const body = document.body;
+            const hamburger = document.getElementById("hamburger");
+            const closeIcon = document.getElementById("close-icon");
 
-            if (navLinks.style.display === "flex") {
-                navLinks.style.display = "none";
+            // Toggle the mobile menu
+            if (navLinks.classList.contains("open")) {
+                navLinks.classList.remove("open");
                 body.classList.remove("no-scroll"); // Enable scrolling
+                hamburger.style.display = "block"; // Show hamburger icon
+                closeIcon.style.display = "none"; // Hide "X" icon
             } else {
-                navLinks.style.display = "flex";
+                navLinks.classList.add("open");
                 body.classList.add("no-scroll"); // Disable scrolling
+                hamburger.style.display = "none"; // Hide hamburger icon
+                closeIcon.style.display = "block"; // Show "X" icon
             }
         }
-        // Close the menu when a link is clicked
-        /**document.querySelectorAll("#nav-links li a").forEach(link => {
-            link.addEventListener("click", () => {
+
+        // Close the mobile menu when a link is clicked
+        document.querySelectorAll("#nav-links li > a").forEach(link => {
+            link.addEventListener("click", (event) => {
                 const navLinks = document.getElementById("nav-links");
-                navLinks.style.display = "none"; // Hide the menu
+                const body = document.body;
+
+                // Check if the link is a dropdown parent
+                if (link.nextElementSibling && link.nextElementSibling.tagName === "UL") {
+                    event.preventDefault(); // Prevent default behavior for dropdown parents
+                } else {
+                    // Close the menu for regular links (only for mobile menu)
+                    if (navLinks.classList.contains("open")) {
+                        navLinks.classList.remove("open");
+                        body.classList.remove("no-scroll"); // Enable scrolling
+                        document.getElementById("hamburger").style.display = "block"; // Show hamburger icon
+                        document.getElementById("close-icon").style.display = "none"; // Hide "X" icon
+                    }
+                }
             });
-        });*/
-    </script>
+        });
+        </script>
     <!--The Typewriter scripts-->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
     <script>
@@ -1392,6 +1494,17 @@ Color palette:
             });
         });
     </script>
+    <script>
+    // Add the "no-click" class to "About Us" and "Worship" dropdown parents
+    document.addEventListener('DOMContentLoaded', function () {
+        const dropdownParents = document.querySelectorAll('nav ul li > a');
+        dropdownParents.forEach(link => {
+            if (link.textContent.trim() === "About Us" || link.textContent.trim() === "Worship") {
+                link.classList.add('no-click');
+            }
+        });
+    });
+</script>
 </html>
 
 
