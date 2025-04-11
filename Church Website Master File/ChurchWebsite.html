@@ -125,13 +125,6 @@ Color palette:
                 },
                 {
                     "@type": "ListItem",
-                    "position": 6,
-                    "name": "Free Reformed Churches",
-                    "url": "https://redeemerfrc.org/#FreeReformedChurches",
-                    "description": "Learn about the Free Reformed Churches (FRCNA)."
-                },
-                {
-                    "@type": "ListItem",
                     "position": 7,
                     "name": "Worship Info",
                     "url": "https://redeemerfrc.org/#WorshipInfo",
@@ -157,13 +150,6 @@ Color palette:
                     "name": "Calendar",
                     "url": "https://redeemerfrc.org/#Calendar",
                     "description": "Stay updated with our upcoming events and activities."
-                },
-                {
-                    "@type": "ListItem",
-                    "position": 11,
-                    "name": "Contact Us",
-                    "url": "https://redeemerfrc.org/#ContactUs",
-                    "description": "Get in touch with us for more information."
                 }
                 ]
             }
@@ -198,6 +184,9 @@ Color palette:
                 flex-direction: column;
                 min-height: 100vh;
                 overflow-x: hidden;
+            }
+            body.no-scroll {
+                overflow: hidden; /* Disable scrolling */
             }
             main {
                 flex: 1;
@@ -588,6 +577,49 @@ Color palette:
                 display: block;
             }
 
+            /* 
+                Add top and bottom lines for dropdown links 
+                Only when not in mobile
+            */
+            @media (min-width: 768px) {
+                #nav-links li ul li a {
+                    position: relative;
+                    color: black;
+                    text-decoration: none;
+                    padding: 10px 10px;
+                    background: none;
+                    border: none;
+                    transition: all 0.2s ease-in-out;
+                }
+
+                #nav-links li ul li a::before,
+                #nav-links li ul li a::after {
+                    content: "";
+                    position: absolute;
+                    width: 0;
+                    height: 2px;
+                    background-color: #FFD369;
+                    transition: all 0.2s ease-in-out;
+                }
+
+                #nav-links li ul li a::before {
+                    top: 0;
+                    left: 0;
+                }
+
+                #nav-links li ul li a::after {
+                    bottom: 0;
+                    left: 0;
+                }
+
+                #nav-links li ul li a:hover::before,
+                #nav-links li ul li a:hover::after {
+                    width: 100%;
+                }
+            }
+            
+            
+            /* Mobile Menu */
             @media (max-width: 768px) {
                 #hamburger {
                     display: block;
@@ -596,24 +628,109 @@ Color palette:
                 #nav-links {
                     display: none;
                     flex-direction: column;
-                    background-color: #222831;
-                    position: absolute;
-                    top: 50px;
+                    background: rgba(0, 0, 0, 0.9); 
+                    -webkit-backdrop-filter: blur(5px);
+                    backdrop-filter: blur(5px);
+                    position: fixed;
+                    top: 0;
                     left: 0;
-                    width: 100%;
-                    z-index: 2;
+                    width: 100%; /* Full width */
+                    height: 100%; /* Full height */
+                    z-index: 3; /* Ensure it appears above other elements */
+                    justify-content: flex-start; /* Align links to the top */
+                    align-items: center; /* Center the links horizontally */
+                    padding-top: 70px; 
+                    overflow-y: auto; /* Enable vertical scrolling */
+                }
+                nav ul li a {
+                    font-size: 2rem; 
+                }
+                nav ul li ul li a {
+                    font-size: 1rem;
+                    color: #FFD369; 
+                    
                 }
 
                 #nav-links li {
                     text-align: center;
-                    margin: 10px 0;
+                    margin: 0px 0; /* Add spacing between links */
+                    width: auto; /* Adjust width for better alignment */
                 }
 
                 #nav-links li ul {
                     position: static;
-                    box-shadow: none;
+                    box-shadow: none; 
+                    background: transparent; 
+                    -webkit-backdrop-filter: none; 
+                    backdrop-filter: none; 
+                    user-select: none;
+                }
+
+                /* Always display dropdown content */
+                nav ul li ul {
+                    display: block !important; /* Ensure dropdown content is always visible */
+                    position: static; /* Remove absolute positioning */
+                    background: transparent; /* Remove background styling */
+                    box-shadow: none; /* Remove shadow */
+                    padding: 0; /* Remove padding */
+                    margin: 0; /* Remove margin */
+                    opacity: 1; /* Ensure visibility */
+                    visibility: visible; /* Ensure visibility */
+                    transform: none; /* Remove any transform effects */
+                }
+
+                /* Adjust dropdown links */
+                nav ul li ul li {
+                    width: auto; /* Adjust width for better alignment */
+                }
+
+                nav ul li ul li a {
+                    color: white; /* Ensure text is visible */
+                    padding: 5px 0px; /* Add padding for spacing */
+                    text-align: left; /* Align text to the left */
+                }
+
+                /* Remove hover effects */
+                nav ul li:hover ul {
+                    display: block; /* Ensure dropdown content is always displayed */
+                    opacity: 1;
+                    visibility: visible;
+                    transform: none;
+                }
+
+                #hamburger {
+                    display: block;
+                    font-size: 30px;
+                    cursor: pointer;
+                    color: white;
+                    padding: 10px;
+                    z-index: 4; /* Ensure it appears above the menu */
+                    position: fixed; /* Keep the hamburger icon fixed */
+                    top: 10px; /* Position it at the top */
+                    left: 50%; /* Start at the center of the screen */
+                    transform: translateX(-50%); /* Adjust to truly center the icon */
+                }
+
+                
+            }
+            @media (max-width: 768px) {
+                #nav-links li ul li a {
+                    text-align: center; /* Center the text inside the dropdown links */
+                    display: block; /* Ensure the links take up the full width */
+                    padding: 10px 0; /* Adjust padding for better spacing */
+                    color: white;
+                }
+
+                #nav-links li ul li {
+                    text-align: center; /* Center the dropdown items */
                 }
             }
+        </style>
+        <!--Content Utilites, text fade in-->
+        <style>
+            .tabcontent {
+                display: none;
+                padding: 20px;
         </style>
         <!--Content Utilites, text fade in-->
         <style>
@@ -826,19 +943,19 @@ Color palette:
                         <li><a id="homeLink" class="tablink" onclick="openPage('home', this, '#FFD369', true); Scroll(0);">Home</a></li>
                         <li>
                             <!--About Us Directory-->
-                            <a>About Us <span class="material-symbols-outlined" style = "">keyboard_arrow_down</span></a>
+                            <a>About Us <span class="material-symbols-outlined">keyboard_arrow_down</span></a>
                             <ul>
                                 <li><a onclick="openPage('WhoWeAre', this, '#FFD369', true); Scroll(0);">Who We Are</a></li>
                                 <li><a onclick="openPage('DoctrinalStandards', this, '#FFD369', true); Scroll(0);">Doctrinal Standards</a></li>
                                 <li><a onclick="openPage('OurLeadership', this, '#FFD369', true); Scroll(0);">Our Leadership</a></li>
                                 <li><a onclick="openPage('Ministries', this, '#FFD369', true); Scroll(0);">Ministries</a></li>
                                 <li><a onclick="openPage('FAQs', this, '#FFD369', true); Scroll(0);">FAQs</a></li>
-                                <li><a onclick="openPage('FreeReformedChurches', this, '#FFD369', true); Scroll(0);">Free Reformed Churches (FRCNA)</a></li>
+                                <li><a href = "https://frcna.org/" target="_blank">Free Reformed Churches (FRCNA)</a></li>
                             </ul>
                         </li>
                         <li>
                             <!--Worship Directory-->
-                            <a>Worship <span class="material-symbols-outlined" style = "">keyboard_arrow_down</span></a>
+                            <a>Worship <span class="material-symbols-outlined">keyboard_arrow_down</span></a>
                             <ul>
                                 <li><a onclick="openPage('WorshipInfo', this, '#FFD369', true); Scroll(0);">Worship Info</a></li>
                                 <li><a onclick="openPage('Sermons', this, '#FFD369', true); Scroll(0);">Sermons</a></li>
@@ -847,6 +964,7 @@ Color palette:
                         </li>
                         <li><a id="calendarLink" class="tablink" onclick="openPage('Calendar', this, '#FFD369', true); Scroll(0);">Calendar</a></li>
                         <li><a id="contactUsLink" class="tablink" onclick="openPage('ContactUs', this, '#FFD369', true); Scroll(0);">Contact Us</a></li>
+                        <li><a id="" class="tablink" href = "https://rfrc.breezechms.com/login" target = "_blank">Give Now</a></li>
                     </ul>
                 </nav>
             </div>
@@ -1098,25 +1216,25 @@ Color palette:
         home: {
             title: "Redeemer FRC",
             description: "A congregation located in <span class='highlight'>South Grand Rapids</span>",
-            image: "_410e1624-ea88-401c-9c29-83d45fd35f00.jpg", // Default home image
+            image: "https://raw.githubusercontent.com/Arrow-programming/turbo-octo-spork/main/Church%20Website%20Master%20File/_410e1624-ea88-401c-9c29-83d45fd35f00.jpg", // Default home image
             backgroundPosition: "" 
         },
         WhoWeAre: {
             title: "Who We Are",
             description: "Learn more about our church and its mission.",
-            image: "_10d0d689-2375-4016-8bf3-9b7afed303d1.jpg",
+            image: "https://raw.githubusercontent.com/Arrow-programming/turbo-octo-spork/main/Church%20Website%20Master%20File/_10d0d689-2375-4016-8bf3-9b7afed303d1.jpg",
             backgroundPosition: "center center"
         },
         DoctrinalStandards: {
             title: "Doctrinal Standards",
             description: "Explore the doctrinal standards that guide our faith.",
-            image: "_4e4ad95c-4da4-4eb8-900c-9ee866257afb.jpg",
+            image: "https://raw.githubusercontent.com/Arrow-programming/turbo-octo-spork/main/Church%20Website%20Master%20File/_4e4ad95c-4da4-4eb8-900c-9ee866257afb.jpg",
             backgroundPosition: "center -150px"
         },
         OurLeadership: {
             title: "Our Leadership",
             description: "Meet the leaders who serve our congregation.",
-            image: "crop_PAGE3_Our-Leadership_page-banner.jpg",
+            image: "https://raw.githubusercontent.com/Arrow-programming/turbo-octo-spork/main/Church%20Website%20Master%20File/crop_PAGE3_Our-Leadership_page-banner.jpg",
             backgroundPosition: "center 0px"
         },
         Ministries: {
@@ -1140,7 +1258,7 @@ Color palette:
         WorshipInfo: {
             title: "Worship Info",
             description: "Details about our worship services and schedule.",
-            image: "_6a5a8104-ed8b-440a-8070-a70c15012e96.jpg",
+            image: "https://raw.githubusercontent.com/Arrow-programming/turbo-octo-spork/main/Church%20Website%20Master%20File/_6a5a8104-ed8b-440a-8070-a70c15012e96.jpg",
             backgroundPosition: "center -200px"
         },
         Sermons: {
@@ -1158,7 +1276,7 @@ Color palette:
         Calendar: {
             title: "Calendar",
             description: "Stay updated with our upcoming events and activities.",
-            image: "PAGE_calendar-EDIT.jpg",
+            image: "https://raw.githubusercontent.com/Arrow-programming/turbo-octo-spork/main/Church%20Website%20Master%20File/PAGE_calendar-EDIT.jpg",
             backgroundPosition: "center 0px"
         },
         ContactUs: {
@@ -1229,12 +1347,23 @@ Color palette:
 
         function toggleMenu() {
             const navLinks = document.getElementById("nav-links");
+            const body = document.body;
+
             if (navLinks.style.display === "flex") {
                 navLinks.style.display = "none";
+                body.classList.remove("no-scroll"); // Enable scrolling
             } else {
                 navLinks.style.display = "flex";
+                body.classList.add("no-scroll"); // Disable scrolling
             }
         }
+        // Close the menu when a link is clicked
+        /**document.querySelectorAll("#nav-links li a").forEach(link => {
+            link.addEventListener("click", () => {
+                const navLinks = document.getElementById("nav-links");
+                navLinks.style.display = "none"; // Hide the menu
+            });
+        });*/
     </script>
     <!--The Typewriter scripts-->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
@@ -1248,21 +1377,22 @@ Color palette:
             new Typed('#typeCursor', typingOptions)
     </script>
     <script>
-    // Wait for the iframe to load
-    window.addEventListener('load', function () {
-        const iframe = document.querySelector('.iframe-class');
-        iframe.addEventListener('load', function () {
-            // Access the iframe's content
-            const iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+        // Wait for the iframe to load
+        window.addEventListener('load', function () {
+            const iframe = document.querySelector('.iframe-class');
+            iframe.addEventListener('load', function () {
+                // Access the iframe's content
+                const iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
 
-            // Find the "Today" button and simulate a click
-            const todayButton = iframeDocument.querySelector('button[aria-label="Today"]');
-            if (todayButton) {
-                todayButton.click();
-            }
+                // Find the "Today" button and simulate a click
+                const todayButton = iframeDocument.querySelector('button[aria-label="Today"]');
+                if (todayButton) {
+                    todayButton.click();
+                }
+            });
         });
-    });
     </script>
 </html>
+
 
 
