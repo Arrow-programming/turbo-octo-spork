@@ -381,30 +381,11 @@ Color palette:
                 left: 0;
                 width: 100%;
                 height: 100%;
-                background-image: url("https://raw.githubusercontent.com/Arrow-programming/turbo-octo-spork/main/Church%20Website%20Master%20File/MainImages/_410e1624-ea88-401c-9c29-83d45fd35f00.jpg");
-                background-position: center; /* Default position */
+                background-image: url("https://th.bing.com/th/id/R.ab3298aef828569e88402ce92407e091?rik=0umrQH26r7%2fS7g&riu=http%3a%2f%2fwallup.net%2fwp-content%2fuploads%2f2017%2f03%2f28%2f362916-sunlight-plants-depth_of_field-flowers-yellow_flowers-nature.jpg&ehk=E5mAtB%2f%2b1lKlQ3bS7O2Oi24gQyyD63gIVsSZ76GP7w0%3d&risl=&pid=ImgRaw&r=0");
+                background-position: center 400px; /* Default position */
                 background-attachment: fixed;
                 opacity: 0.7;
                 z-index: 0;
-            }
-
-            /* Adjust background position for different screen sizes */
-            @media (min-width: 1200px) {
-                .hero #img {
-                    background-position: -800px -145px; /* Adjust for large screens */
-                }
-            }
-
-            @media (max-width: 1199px) and (min-width: 768px) {
-                .hero #img {
-                    background-position: -915px -120px; /* Adjust for medium screens */
-                }
-            }
-
-            @media (max-width: 767px) {
-                .hero #img {
-                    background-position: -1000px -180px; /* Adjust for small screens */
-                }
             }
 
             /* Media Query for smaller screens */
@@ -1116,7 +1097,73 @@ Color palette:
                 }
             }
         </style>
+        <!--Contact Us Page-->
+        <style>
+            form {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                width: 100%;
+                max-width: 500px;
+                margin: 0 auto;
+                padding: 20px;
+                background: rgba(255, 255, 255, 0.1);
+                -webkit-backdrop-filter: blur(10px);
+                backdrop-filter: blur(10px);
+                border-radius: 10px;
+                box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+            }
 
+            form label {
+                font-size: 1rem;
+                color: #FFC107;
+            }
+
+            form input, form textarea {
+                width: 100%;
+                padding: 12px;
+                border: none;
+                border-bottom: 2px solid #ccc;
+                background-color: transparent;
+                font-size: 1rem;
+                color: #393E46;
+                outline: none;
+                transition: border-color 0.3s ease, background-color 0.3s ease;
+            }
+
+            form input:focus, form textarea:focus {
+                border-bottom: 2px solid #FFD369;
+                background-color: rgba(255, 255, 255, 0.2);
+            }
+
+            form textarea {
+                resize: none;
+                height: 100px;
+            }
+
+            form button {
+                background-color: #FFD369;
+                color: #222831;
+                border: none;
+                padding: 12px 20px;
+                font-size: 1rem;
+                font-weight: bold;
+                border-radius: 25px;
+                cursor: pointer;
+                transition: background-color 0.3s ease, transform 0.2s ease;
+                box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            }
+
+            form button:hover {
+                background-color: #FFC107;
+                transform: translateY(-2px);
+            }
+
+            form button:active {
+                transform: translateY(0);
+                box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+            }
+        </style>
     </head>
     <body>
         <!--The Header, navigation-->
@@ -1152,12 +1199,12 @@ Color palette:
                             </ul>
                         </li>
                         <li>
-                            <!--Worship Directory-->
                             <a>Worship <span class="material-symbols-outlined">keyboard_arrow_down</span></a>
                             <ul>
                                 <li><a onclick="openPage('WorshipInfo', this, '#FFD369', true); Scroll(0);">Worship Info</a></li>
                                 <li><a onclick="openPage('Sermons', this, '#FFD369', true); Scroll(0);">Sermons</a></li>
                                 <li><a onclick="openPage('Meditation', this, '#FFD369', true); Scroll(0);">Meditation</a></li>
+                                <li><a onclick="openPage('LiveStream', this, '#FFD369', true); Scroll(0);">Live Stream</a></li>
                             </ul>
                         </li>
                         <li><a id="calendarLink" class="tablink" onclick="openPage('Calendar', this, '#FFD369', true); Scroll(0);">Calendar</a></li>
@@ -1300,31 +1347,6 @@ Color palette:
                     </div>
                 </div>
             </div>
-            <!--
-            Sunday School & Catechism Classes (ages 3-18)
-                - Every Sunday after the morning service during the school year.
-            Adult Sunday School
-                - Every Sunday after the morning service during the school year.
-            Confession of Faith / New Members Class
-                - See one of our elders for details.
-            Evening Ladies Bible Study
-                - Every other Tuesday at 7 p.m. during the school year. 
-            Adult Book Study Small Groups
-                - Once a month in members homes.
-            Youth Group (8th-12th grade)
-                - Every other Sunday after the evening service. Check out our denomination’s youth website and app Plants and Pillars.
-            Neighborhood Outreach
-                - 1st and 3rd Saturday of the month at 2 p.m.
-            Prayer Meetings
-                - 1st and 3rd Wednesdays of the month at 7 p.m.
-            Church Fellowship Meals
-                - Every other month after the evening service.
-            In addition to general church collections we also financially support the following ministries:
-                - Come Over and Help
-                - Word & Deed
-                - Alpha Grand Rapids
-            
-            -->
             <div id="Ministries" class="tabcontent">
                 <div class="content-content">
                     <!-- First Text Box -->
@@ -1387,21 +1409,60 @@ Color palette:
                     </div>
                 </div>
             </div>
-            
-            <!--Worship-->
-            <!--<div id="Worship" class="tabcontent">
-                <div class="content-content">
-                    <div class="content-text">
-                        <h2 class="onscroll">Worship</h2>
-                        <p class="onscroll">Learn more about our worship services.</p>
-                    </div>
-                </div>
-            </div>-->
             <div id="WorshipInfo" class="tabcontent">
                 <div class="content-content">
                     <div class="content-text">
                         <h2 class="onscroll">Worship Info</h2>
-                        <p class="onscroll">Information about our worship services.</p>
+                        <p class="onscroll">Worship times are 9:30 a.m. and 5:00 p.m. on Sundays. An additional prayer meeting is held on the first Wednesday of every month at 7:00 p.m. at Hanley Christian Reformed Church.
+<br>
+Our worship, in keeping with the precepts of Scripture as well as the confessions of our denomination, is biblical, God-centered, reverent, and orderly.</p>
+                    </div>
+                    <div class="content-text">
+                        <h2 class="onscroll">Order of Worship</h2>
+                        <div style="display: flex; justify-content: space-between; flex-wrap: wrap;">
+                            <div style="flex: 1; min-width: 300px; margin-right: 20px;">
+                                <h3>Morning Worship – 9:30 AM</h3>
+                                <ul class="bullet">
+                                    <li>Announcements</li>
+                                    <li>Call to Worship*</li>
+                                    <li>Silent Prayer*</li>
+                                    <li>Votum and Salutation*</li>
+                                    <li>Psalter*</li>
+                                    <li>Reading of the Law</li>
+                                    <li>Psalter</li>
+                                    <li>Reading of Scripture</li>
+                                    <li>Pastoral Prayer</li>
+                                    <li>Psalter*</li>
+                                    <li>Sermon</li>
+                                    <li>Prayer</li>
+                                    <li>Psalter*</li>
+                                    <li>Benediction*</li>
+                                    <li>Doxology*</li>
+                                </ul>
+                            </div>
+                            <div style="flex: 1; min-width: 300px;">
+                                <h3>Evening Worship – 5:00 PM</h3>
+                                <ul class="bullet">
+                                    <li>Song Service</li>
+                                    <li>Announcements</li>
+                                    <li>Call to Worship*</li>
+                                    <li>Silent Prayer*</li>
+                                    <li>Votum and Salutation*</li>
+                                    <li>Psalter*</li>
+                                    <li>Reading of Scripture</li>
+                                    <li>Psalter</li>
+                                    <li>Apostle’s Creed</li>
+                                    <li>Pastoral Prayer</li>
+                                    <li>Psalter*</li>
+                                    <li>Sermon</li>
+                                    <li>Prayer</li>
+                                    <li>Psalter*</li>
+                                    <li>Benediction*</li>
+                                    <li>Doxology*</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <p style="text-align: center; margin-top: 20px;">*Please stand if you are able.</p>
                     </div>
                 </div>
             </div>
@@ -1409,7 +1470,16 @@ Color palette:
                 <div class="content-content">
                     <div class="content-text">
                         <h2 class="onscroll">Sermons</h2>
-                        <p class="onscroll">Listen to our sermons.</p>
+                        <iframe 
+                            loading="lazy" 
+                            width="100%" 
+                            height="700" 
+                            src="https://embed.sermonaudio.com/browser/broadcaster/frcgrsw/?sort=newest&#038;page_size=25" 
+                            style="display: block; margin: auto; align-items: center; min-width: 100%; max-width: 100%; border: none; box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5); border-radius: 10px; overflow: hidden;" 
+                            scrolling="yes" 
+                            class="iframe-class" 
+                            frameborder="0">
+                        </iframe>
                     </div>
                 </div>
             </div>
@@ -1417,11 +1487,35 @@ Color palette:
                 <div class="content-content">
                     <div class="content-text">
                         <h2 class="onscroll">Meditation</h2>
-                        <p class="onscroll">Read our meditations.</p>
+                        <p class="onscroll"> <i>~ May 10, 2025 ~</i><br> <b>Luke 17:12-13: “Then as He entered a certain village, there met Him ten men who were lepers, who stood afar off. And they lifted up their voices and said, “Jesus, Master, have mercy on us!”</b>
+
+<br><br>How earnestly men can cry for help when they feel their need of it! (v. 13). It is difficult to conceive of any condition more thoroughly miserable than that of men afflicted with leprosy.
+
+How is it that many never pray at all? How is it that many are content to repeat a form of words but never pray with their hearts? How is it that dying men and women, with souls to be lost or saved, can know so little of real, hearty, businesslike prayer? The answer to these questions is short and simple. The bulk of mankind have no sense of sin. They do not feel their spiritual disease. They are not conscious that they are lost and guilty and hanging over the brink of hell. When a man finds out his soul’s ailment he soon learns to pray. Like the lepers, he finds words to express his needs.
+
+How is it that many true believers often pray so coldly? What is the reason that their prayers are so feeble, wandering and lukewarm? The answer once more is very plain. Their sense of need is not as deep as it ought to be. They are not truly alive to their own weakness and helplessness and so they do not cry fervently for mercy and grace. Let us remember these things.
+<br>
+~ JC Ryle</p>
                     </div>
                 </div>
             </div>
-            
+            <div id="LiveStream" class="tabcontent">
+                <div class="content-content">
+                    <div class="content-text">
+                        <h2 class="onscroll">Live Stream</h2>
+                        <p class="onscroll">Join us for our live worship services below:</p>
+                        <iframe 
+                            width="100%" 
+                            height="700" 
+                            src="https://embed.sermonaudio.com/player/l/frcgrsw/" 
+                            style="display: block; margin: auto; align-items: center; min-width: 100%; max-width: 100%; border: none; box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5); border-radius: 10px; overflow: hidden;" 
+                            class="iframe-class" 
+                            frameborder="0" 
+                            scrolling="no">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
             <!--Calendar-->
             <div id="Calendar" class="tabcontent">
                 <div class="content-content">
@@ -1461,7 +1555,19 @@ Color palette:
                 <div class="content-content">
                     <div class="content-text">
                         <h2 class="onscroll">Contact Us</h2>
-                        <p class="onscroll">Get in touch with us.</p>
+                        <p class="onscroll">Get in touch with us by filling out the form below:</p>
+                        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="onscroll">
+                            
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                            
+                            
+                            <input type="email" id="email" name="_replyto" placeholder="Your Email" required>
+                            
+                            
+                            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                            
+                            <button type="submit">Send Message</button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -1505,6 +1611,7 @@ Color palette:
                     <li><a href="#" onclick="openPage('WorshipInfo', this, '#FFD369', true); Scroll(0);">Worship Info</a></li>
                     <li><a href="#" onclick="openPage('Sermons', this, '#FFD369', true); Scroll(0);">Sermons</a></li>
                     <li><a href="#" onclick="openPage('Meditation', this, '#FFD369', true); Scroll(0);">Meditation</a></li>
+                    <li><a href="#" onclick="openPage('LiveStream', this, '#FFD369', true); Scroll(0);">Live Stream</a></li>
                 </ul>
             </div>
 
@@ -1575,19 +1682,19 @@ Color palette:
         home: {
             title: "Redeemer FRC",
             description: "A congregation of the Free Reformed Churches of North America",
-            image: "https://raw.githubusercontent.com/Arrow-programming/turbo-octo-spork/main/Church%20Website%20Master%20File/MainImages/_410e1624-ea88-401c-9c29-83d45fd35f00.jpg", // Default home image
-            backgroundPosition: "" 
+            image: "https://th.bing.com/th/id/R.ab3298aef828569e88402ce92407e091?rik=0umrQH26r7%2fS7g&riu=http%3a%2f%2fwallup.net%2fwp-content%2fuploads%2f2017%2f03%2f28%2f362916-sunlight-plants-depth_of_field-flowers-yellow_flowers-nature.jpg&ehk=E5mAtB%2f%2b1lKlQ3bS7O2Oi24gQyyD63gIVsSZ76GP7w0%3d&risl=&pid=ImgRaw&r=0",
+            backgroundPosition: "center 400px"
         },
         WhoWeAre: {
             title: "Who We Are",
             description: "Learn more about our church and its mission.",
-            image: "https://raw.githubusercontent.com/Arrow-programming/turbo-octo-spork/main/Church%20Website%20Master%20File/MainImages/_10d0d689-2375-4016-8bf3-9b7afed303d1.jpg",
+            image: "https://cdn.suwalls.com/wallpapers/flowers/yellow-blossoms-38056-1920x1080.jpg",
             backgroundPosition: "center center"
         },
         DoctrinalStandards: {
             title: "Doctrinal Standards",
             description: "Explore the doctrinal standards that guide our faith.",
-            image: "https://raw.githubusercontent.com/Arrow-programming/turbo-octo-spork/main/Church%20Website%20Master%20File/MainImages/_4e4ad95c-4da4-4eb8-900c-9ee866257afb.jpg",
+            image: "https://th-thumbnailer.cdn-si-edu.com/u-NnXDHcK5ss06afkbVpVUgD35A=/fit-in/1072x0/https://tf-cmsv2-photocontest-smithsonianmag-prod-approved.s3.amazonaws.com/99a79c6b-3760-4d68-8392-7d8b2396c112.jpg",
             backgroundPosition: "center -150px"
         },
         OurLeadership: {
@@ -1599,38 +1706,38 @@ Color palette:
         Ministries: {
             title: "Ministries",
             description: "Discover the ministries we offer to serve our community.",
-            image: "ministries.jpg",
+            image: "https://www.hdwallpapers.in/download/blossom_spring_cherry_yellow_flowers_tree_branch_in_blur_background_hd_yellow-HD.jpg",
             backgroundPosition: "center center"
         },
         FAQs: {
             title: "FAQs",
             description: "Find answers to frequently asked questions about our church.",
-            image: "faqs.jpg",
-            backgroundPosition: "center center"
-        },
-        FreeReformedChurches: {
-            title: "Free Reformed Churches",
-            description: "Learn about the Free Reformed Churches (FRCNA).",
-            image: "free-reformed-churches.jpg",
+            image: "https://wallup.net/wp-content/uploads/2017/11/23/510069-nature-plants-flowers-macro-depth_of_field-rose-yellow_flowers-yellow-black_background.jpg",
             backgroundPosition: "center center"
         },
         WorshipInfo: {
             title: "Worship Info",
             description: "Details about our worship services and schedule.",
-            image: "https://raw.githubusercontent.com/Arrow-programming/turbo-octo-spork/main/Church%20Website%20Master%20File/MainImages/_6a5a8104-ed8b-440a-8070-a70c15012e96.jpg",
-            backgroundPosition: "center -200px"
+            image: "https://www.hdwallpapers.in/download/stream_on_yellow_foliage_covered_rock_during_daytime_hd_nature-HD.jpg",
+            backgroundPosition: "center 600px"
         },
         Sermons: {
             title: "Sermons",
             description: "Listen to sermons and grow in your faith.",
-            image: "sermons.jpg",
+            image: "https://wallpapercave.com/wp/wp3808952.jpg",
             backgroundPosition: "center center"
         },
         Meditation: {
             title: "Meditation",
             description: "Read meditations to reflect on God's Word.",
-            image: "meditation.jpg",
+            image: "https://wallpaperaccess.com/full/552432.jpg",
             backgroundPosition: "center center"
+        },
+        LiveStream: {
+            title: "Live Stream",
+            description: "Join us for live worship services.",
+            image: "https://static.vecteezy.com/system/resources/previews/038/094/293/non_2x/ai-generated-yellow-soft-background-free-photo.jpg",
+            backgroundPosition: "center -300px"
         },
         Calendar: {
             title: "Calendar",
@@ -1641,8 +1748,8 @@ Color palette:
         ContactUs: {
             title: "Contact Us",
             description: "Get in touch with us for more information.",
-            image: "contact-us.jpg",
-            backgroundPosition: "center center"
+            image: "https://th.bing.com/th/id/R.ab3298aef828569e88402ce92407e091?rik=0umrQH26r7%2fS7g&riu=http%3a%2f%2fwallup.net%2fwp-content%2fuploads%2f2017%2f03%2f28%2f362916-sunlight-plants-depth_of_field-flowers-yellow_flowers-nature.jpg&ehk=E5mAtB%2f%2b1lKlQ3bS7O2Oi24gQyyD63gIVsSZ76GP7w0%3d&risl=&pid=ImgRaw&r=0",
+            backgroundPosition: "center 400px"
         }
     };
     </script>
@@ -1863,6 +1970,15 @@ Color palette:
                 }
             });
         });
+    </script>
+    <!--Handle form-->
+    <script>
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            alert("Thank you for your message! We'll get back to you soon.");
+            event.target.reset(); // Clear the form
+            return false;
+        }
     </script>
 </html>
 
