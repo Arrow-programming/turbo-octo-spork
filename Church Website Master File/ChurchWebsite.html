@@ -1217,10 +1217,9 @@ Color palette:
         </header>
         <!--The MAIN Content-->
         <main>
-            <!--Home-->
             <div id="home" class="tabcontent">
-                <div class="content-content">
-                    <div class="quote">
+                <div class="content-content onscroll">
+                    <div class="quote onscroll">
                         <span class="material-icons">format_quote</span>
                         For I know that my <b>redeemer</b> liveth, and that he shall stand at the latter day upon the earth <br> - Job 19:25 (KJV)
                     </div>
@@ -1242,8 +1241,6 @@ Color palette:
                     </div>
                 </div>
             </div>
-            <!--About Us-->
-            <!--<div id="AboutUs" class="tabcontent">
                 <div class="content-content">
                     <div class="content-text">
                         <h2 class="onscroll">About Us</h2>
@@ -1517,7 +1514,6 @@ How is it that many true believers often pray so coldly? What is the reason that
                     </div>
                 </div>
             </div>
-            <!--Calendar-->
             <div id="Calendar" class="tabcontent">
                 <div class="content-content">
                     <div class="content-text">
@@ -1550,8 +1546,6 @@ How is it that many true believers often pray so coldly? What is the reason that
                         </iframe>
                 </div>
             </div>
-            
-            <!--Contact Us-->
             <div id="ContactUs" class="tabcontent">
                 <div class="content-content">
                     <div class="content-text">
@@ -1982,7 +1976,15 @@ How is it that many true believers often pray so coldly? What is the reason that
             return false;
         }
     </script>
+    <!--Add the onscroll class to all content text-->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Add .onscroll to all .content-content, .content-text, .leadership-section, .leadership-card inside <main>
+            document.querySelectorAll('main .content-content, main .content-text, main .leadership-section, main .leadership-card .bullet').forEach(el => {
+                el.classList.add('onscroll');
+            });
+        });
+    </script>
 </html>
-
 
 
