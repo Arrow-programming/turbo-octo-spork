@@ -1237,14 +1237,29 @@ Color palette:
                             <li>Prepared to die well, fully assured of the finished work of Christ</li>
                         </ul>
                     </div>
-                </div>
-            </div>
-                <div class="content-content">
-                    <div class="content-text">
-                        <h2 class="onscroll">About Us</h2>
-                        <p class="onscroll">Learn more about us and our beliefs.</p>
+                    <!-- Map Widget and Directions Button -->
+                    <div class="content-text" style="margin-top:30px;">
+                        <h3 class="onscroll">Find Us</h3>
+                        <div style="width:100%;max-width:600px;margin:auto;">
+                            <iframe
+                                title="Church Location Map"
+                                width="100%"
+                                height="350"
+                                style="border:0; border-radius:10px; box-shadow:0 0 10px rgba(0,0,0,0.2);"
+                                loading="lazy"
+                                allowfullscreen
+                                referrerpolicy="no-referrer-when-downgrade"
+                                src="https://maps.google.com/maps?q=1620%2052nd%20St%20SW%2C%20Wyoming%2C%20MI%2049519-9629&t=&z=15&ie=UTF8&iwloc=&output=embed">
+                            </iframe>
+                        </div>
+                        <button
+                            id="directions-btn"
+                            style="margin-top:15px; background:#FFD369; color:#222831; border:none; border-radius:25px; padding:12px 24px; font-size:1rem; font-weight:bold; cursor:pointer; transition:background 0.3s;">
+                            Get Directions
+                        </button>
                     </div>
                 </div>
+            </div>
             </div>-->
             <div id="WhoWeAre" class="tabcontent">
                 <div class="content-content">
@@ -1983,6 +1998,31 @@ How is it that many true believers often pray so coldly? What is the reason that
             });
         });
     </script>
-</html>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const btn = document.getElementById('directions-btn');
+            if (btn) {
+                btn.addEventListener('click', function () {
+                    const address = encodeURIComponent('1620 52nd St SW, Wyoming, MI 49519-9629');
+                    let url = '';
+                    const ua = navigator.userAgent || navigator.vendor || window.opera;
 
+                    if (/android/i.test(ua)) {
+                        // Android: open in Google Maps app
+                        url = `geo:0,0?q=${address}`;
+                    } else if (/iPad|iPhone|iPod/.test(ua) && !window.MSStream) {
+                        // iOS: open in Apple Maps app
+                        url = `http://maps.apple.com/?daddr=${address}`;
+                    } else {
+                        // Desktop or unknown: open in Google Maps in browser
+                        url = `https://www.google.com/maps/dir/?api=1&destination=${address}`;
+                    }
+
+                    // Try to open the app, fallback to browser if needed
+                    window.location.href = url;
+                });
+            }
+        });
+    </script>
+</html>
 
