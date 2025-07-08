@@ -465,6 +465,16 @@ Color palette:
             nav ul li a:hover {
                 background-color: #FFD369;
             }
+            
+            @media (max-width: 768px) {
+                nav ul li a:hover,
+                #nav-links li ul li a:hover {
+                    background-color: #FFD369 !important;
+                    color: white !important;
+                    border-radius: 20px;
+                }
+            }
+
             /* Add sliding animation to dropdown */
             nav ul li ul {
                 transition: 0s;
@@ -534,6 +544,7 @@ Color palette:
                 box-shadow: 0px 0px 15px rgb(0, 0, 0, 0.5);
                 z-index: 2;
             }
+            
 
             #hamburger {
                 display: none;
@@ -581,7 +592,6 @@ Color palette:
                 
             }
             
-            
             /* Mobile Menu */
             @media (max-width: 768px) {
                 #hamburger {
@@ -605,11 +615,19 @@ Color palette:
                     padding-top: 70px; 
                     overflow-y: auto; /* Enable vertical scrolling */
                 }
-                nav ul li a {
-                    font-size: 2rem; 
+                
+                @media (max-width: 768px) {
+                    #nav-links > li > a.no-click {
+                        display: none !important;
+                    }
                 }
+
+                nav ul li a {
+                    font-size: 1.7rem;
+                }
+
                 nav ul li ul li a {
-                    font-size: 1rem;
+                    font-size: 1.7rem;
                     color: #FFD369; 
                     
                 }
@@ -688,6 +706,8 @@ Color palette:
                     text-align: center; /* Center the dropdown items */
                 }
             }
+
+            
         </style>
         <!--Content Utilites, text fade in-->
         <style>   
@@ -1889,11 +1909,11 @@ How is it that many true believers often pray so coldly? What is the reason that
         });
     </script>
     <script>
-        // Add the "no-click" class to "About Us" and "Worship" dropdown parents
         document.addEventListener('DOMContentLoaded', function () {
             const dropdownParents = document.querySelectorAll('nav ul li > a');
             dropdownParents.forEach(link => {
-                if (link.textContent.trim() === "About Us" || link.textContent.trim() === "Worship") {
+                const text = link.textContent.trim();
+                if (text.startsWith("About Us") || text.startsWith("Worship")) {
                     link.classList.add('no-click');
                 }
             });
